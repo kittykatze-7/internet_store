@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+header {
+    background-color: #2d2d2d;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 16px;
+    height: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn:hover {
+    opacity: 0.8;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 8px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1;
+}
+
+.smart-badge {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+.smart-badge span:first-child {
+    color: white;
+}
+
+.smart-box {
+    background-color: #ffd700;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.smart-box::before {
+    content: "!";
+    background-color: #00a046;
+    color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+/* Catalog Button */
+.catalog-btn {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.catalog-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.catalog-btn svg {
+    flex-shrink: 0;
+}
+
+/* Search Container */
+.search-container {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0 12px;
+    height: 44px;
+}
+
+.search-icon {
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.mic-icon {
+    flex-shrink: 0;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.mic-icon:hover {
+    opacity: 0.7;
+}
+
+/* Search Button */
+.search-btn {
+    background-color: #00a046;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    height: 44px;
+}
+
+.search-btn:hover {
+    background-color: #008a3d;
+}
+
+/* Icon Buttons */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.icon-btn:hover {
+    opacity: 0.8;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .logo-text h1 {
+        font-size: 24px;
+    }
+    
+    .search-container {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+    
+    .logo-text h1 {
+        font-size: 20px;
+    }
+    
+    .smart-badge {
+        font-size: 10px;
+    }
+    
+    .catalog-btn span {
+        display: none;
+    }
+    
+    .search-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
