@@ -128,15 +128,23 @@ button:hover{
     flex-shrink: 0;
 }
 
+/* Search Wrapper */
+.search-wrapper {
+    flex: 1;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
 /* Search Container */
 .search-container {
     flex: 1;
-    max-width: 1000px;
     position: relative;
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 8px 0 0 8px;
     padding: 0 12px;
     height: 44px;
 }
@@ -153,6 +161,7 @@ button:hover{
     font-size: 16px;
     color: #333;
     background: transparent;
+    padding: 10px 12px;
 }
 
 .search-input::placeholder {
@@ -177,6 +186,7 @@ button:hover{
 
 /* Search Button */
 .search-btn {
+    margin-left: 0px;
     background-color: #00a046;
     color: white;
     border: none;
@@ -188,10 +198,18 @@ button:hover{
     white-space: nowrap;
     transition: background-color 0.2s;
     height: 44px;
+    padding: 12px 18px;
+    border: 1px solid #cfd6dd;
+    border-left: none;              /* щоб рамка не дублювалась з input */
+    border-radius: 0 999px 999px 0; /* заокруглення справа */
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
 }
 
 .search-btn:hover {
     background-color: #008a3d;
+    border-radius: 0 999px 999px 0;
 }
 
 /* Icon Buttons */
@@ -223,6 +241,9 @@ button:hover{
     }
     
     .search-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
         max-width: 400px;
     }
 }
