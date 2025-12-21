@@ -28,6 +28,11 @@ button:hover{
     border-radius: 7px;
 }
 
+a,a:visited,a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Hamburger Menu Button */
 .menu-btn {
     background: none;
