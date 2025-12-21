@@ -22,7 +22,11 @@ header {
     justify-content: center;
 }
 
-
+button:hover{
+    background-color: #999;
+    transition: 0.2s;
+    border-radius: 7px;
+}
 
 /* Hamburger Menu Button */
 .menu-btn {
@@ -159,11 +163,17 @@ header {
     flex-shrink: 0;
     margin-left: 8px;
     cursor: pointer;
+    stroke: #666;              /* default color */
+    transition: stroke 0.2s ease;
+    cursor: pointer;  
 }
 
 .mic-icon:hover {
     opacity: 0.7;
+    stroke: rgb(200, 40, 9);
 }
+
+  
 
 /* Search Button */
 .search-btn {
