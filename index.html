@@ -63,7 +63,7 @@
             <button class="search-btn">Знайти</button>
         </div>
         
-        <button class="icon-btn">
+        <button class="btn primary" id="openBtn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
@@ -92,6 +92,64 @@
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
         </button>
+
+        <div class="overlay" id="overlay" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+              <div class="modal__header">
+                <h2 class="modal__title" id="dialogTitle">Реєстрація</h2>
+                <button class="modal__close" id="closeBtn" aria-label="Закрити">×</button>
+              </div>
+        
+              <div class="modal__body">
+                <form action="">
+                    <label for="phone">Номер телефону:</label>
+                    <input type="tel" name="phone number" id="phone">
+                    <br>
+                    <button type="submit" class="c1">Продовжити</button>
+                    <p>Продовжуючи, ви підтверджуєте, що згодні увійти до облікового запису Rozetka та надаєте згоду на обробку персональних даних </p>
+                    <p>або</p>
+                    <button class="c2">продовжуйте з Google</button>
+                    <br>
+                    <button class="c3">продовжуйте з Apple</button>
+                </form>
+              </div>
+        
+              <div class="modal__footer">
+        
+              </div>
+            </div>
+          </div>
+        
+          <script>
+            const overlay = document.getElementById('overlay');
+            const openBtn = document.getElementById('openBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+        
+            function openModal() {
+              overlay.classList.add('open');
+              overlay.setAttribute('aria-hidden', 'false');
+            }
+        
+            function closeModal() {
+              overlay.classList.remove('open');
+              overlay.setAttribute('aria-hidden', 'true');
+            }
+        
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+        
+            // клік по затемненню — закрити
+            overlay.addEventListener('click', (e) => {
+              if (e.target === overlay) closeModal();
+            });
+        
+            // Esc — закрити
+            document.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') closeModal();
+            });
+          </script>
     </header>
 </body>
 </html>
